@@ -2,12 +2,12 @@
   "name": "unity-policyserver",
   "version": "1.0.0",
   "scripts": {
-    "start": "grunt",
-    "test": "grunt test"
+    "start": "./node_modules/.bin/grunt"
   },
   "dependencies": {
     "dotenv": "^0.4.0",
     "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "grunt-shell": "^1.1.1"
   },
   "description": "A simple, light-weight Unity3D Socket Policy Server",
