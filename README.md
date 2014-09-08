@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/i8degrees/unity-policyserver.png?branch=master)](https://travis-ci.org/i8degrees/unity-policyserver/)
+
 # Unity Socket Policy Server
 
 A simple, light-weight Unity3D Socket Policy Server for [node.js](http://nodejs.org).
