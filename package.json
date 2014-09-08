@@ -1,0 +1,44 @@
+{
+  "name": "unity-policyserver",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "grunt",
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "dotenv": "^0.4.0",
+    "grunt": "^0.4.5",
+    "grunt-shell": "^1.1.1"
+  },
+  "description": "A simple, light-weight Unity3D Socket Policy Server",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i8degrees/unity-policyserver.git"
+  },
+  "keywords": [
+    "unity",
+    "unity3d",
+    "socket",
+    "policy",
+    "server",
+    "crossdomain",
+    "crossdomain.xml",
+    "flash",
+    "webplayer"
+  ],
+  "author": {
+    "name": "Jeffrey Carpenter",
+    "email": "<i8degrees@gmail.com>",
+    "url": "https://github.com/i8degrees"
+  },
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/i8degrees/unity-policyserver/issues"
+  },
+  "homepage": "https://github.com/i8degrees/unity-policyserver"
+}

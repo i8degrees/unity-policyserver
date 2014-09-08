@@ -1,27 +1,40 @@
 # Unity Socket Policy Server
 
+A simple, light-weight Unity3D Socket Policy Server for [node.js](http://nodejs.org).
+
+## Installation
+
 ## Usage
 
-Create ```crossdomain.xml``` in same directory as server.js, if you do not have an existing one:
+**NOTE:** Must be invoked from the package's root directory.
 
 ```
-touch crossdomain.xml
-echo "<?xml version='1.0'?><cross-domain-policy><allow-access-from domain='*'/></cross-domain-policy>" > crossdomain.xml
+grunt
 ```
 
-```
-sudo node server.js
-```
+### Testing Communication With Server
 
-Verifying working state:
+**NOTE:** Must be invoked from the package's root directory.
 
 ```
-node tests/client.js
+grunt test
 ```
+
+## Configuration
+
+The following environment variables can be set through either the package's local **.env** file, or by setting the following name value pair from within a script or interactive shell (i.e.: ```UNITY_POLICY_SERVER_HOST=0.0.0.0``` under BASH). Note that the .env configuration will overwrite existing environment variables of with the same name.
+
+```UNITY_POLICY_SERVER_HOST``` *(.env defaults to localhost)*
+
+**NOTE:** The default server host value for Unity3D's sockpol.exe implementation is 0.0.0.0, *not* localhost (as per version 4.3.4f1).
+
+```UNITY_POLICY_SERVER_PORT``` *(.env defaults to 843)*
+```UNITY_POLICY_SERVER_TIMEOUT``` *(.env defaults to 3000 milliseconds)*
+```UNITY_POLICY_SERVER_FILE``` *(.env defaults to crossdomain.xml)*
+
+**NOTE:** Be sure to restart the server after modifying configuration values!
 
 ## Notes
-
-* Uses crossdomain.xml example from http://docs.unity3d.com/Manual/SecuritySandbox.html
 
 * It is strongly recommended that you change the default listening port number from 843 to something above 1024, as this allows you to run with reduced privileges (i.e.: not root). See also: http://docs.unity3d.com/ScriptReference/Security.PrefetchSocketPolicy.html
 
@@ -31,6 +44,8 @@ node tests/client.js
 
 * Package
 * Example of using app with Express? 
+* 'stop', 'restart' functionality from within package.json
+* Logging output to file
 
 ## Contributing
 

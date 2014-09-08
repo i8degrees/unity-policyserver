@@ -1,7 +1,13 @@
+// Dependencies
 var net = require('net');
+var config = require('dotenv');
 
-// 'connect' listener
-var client = net.connect( {port: 843}, function() {
+config.load();  // Loads .env file into shell environment
+
+var host = process.env.UNITY_POLICY_SERVER_HOST;
+var port = process.env.UNITY_POLICY_SERVER_PORT;
+
+var client = net.connect( { port: port, host: host }, function() {
   console.log('client connected');
 
   client.write('<policy-file-request/>\0');
