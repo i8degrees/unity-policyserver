@@ -4,7 +4,7 @@ var net = require('net');
 var client = net.connect( {port: 843}, function() {
   console.log('client connected');
 
-  client.write('<policy-file-request/>');
+  client.write('<policy-file-request/>\0');
 });
 
 client.on('data', function(data) {
